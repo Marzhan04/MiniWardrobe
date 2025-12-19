@@ -1,0 +1,65 @@
+/* Общие стили для всей страницы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7e6ff; /* Более нежный розовый фон для всей страницы */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Стили для секции "Wardrobe" */
+.wardrobe-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для каждой категории */
+.category {
+    background-color: #f7e6ff; /* Нежно-розовый фон для категорий */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    /* Убираем обводку, оставляем только фоновый цвет */
+}
+
+/* Стили для заголовка категории */
+.category h2 {
+    font-size: 1.8rem;
+    color: #35B7A8; /* Нежный зеленый для заголовков */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; /* Заголовки выравниваем по левому краю */
+}
+
+/* Стили для контейнера с изображениями */
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Гибкая сетка */
+    gap: 60px;
+    justify-items: center;
+}
+
+/* Стили для каждого элемента */
+.item {
+    text-align: center;
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Ограничиваем ширину изображения */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}

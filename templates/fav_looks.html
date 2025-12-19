@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Looks</title>
+    <link rel="stylesheet" href="/static/css/fav.looks.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="search-profile">
+                <div class="profile-buttons">
+                    <a href="{{ url_for('main') }}" class="main-btn">
+                        <button>Home →</button>
+                    </a>
+                    <a href="{{ url_for('profile') }}" class="profile-btn">
+                        <button>Profile →</button>
+                    </a>
+                </div>                
+            </div>
+            <div class="header-content">
+                <div class="text">
+                    <h1>Favourite Looks</h1>
+                    <p class="subtitle">Saved inspirations & styles <span>✨</span></p>
+                    <p class="item-count">Favourite Items {{ favorite_looks|length }}</p>
+                </div>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="/static/images/f_1.png" alt="Shopping Bag">
+                    </div>
+                    <div class="icon">
+                        <img src="/static/images/f_2.png" alt="Heart">
+                    </div>
+                    <div class="icon">
+                        <img src="/static/images/f_3.png" alt="Hanger">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <section class="looks-section">
+        {% for look in favorite_looks %}
+            <div class="look">
+                <img src="{{ url_for('static', filename='images/' + look['top_image']) }}" alt="Outfit">
+                <p>{{ look['name'] }}</p>
+                <button class="view-btn">View</button>
+            </div>
+        {% else %}
+            <p>No favorite looks saved yet.</p>
+        {% endfor %}
+    </section>
+</body>
+</html>

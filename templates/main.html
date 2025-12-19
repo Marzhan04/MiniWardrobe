@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniWardrobe</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome, {{ current_user.name }}!</h1>
+    <img src="/static/images/dress.png" alt="Image 1" class="corner-img left">
+    <img src="/static/images/dress.png" alt="Image 2" class="corner-img right">
+  </header>
+
+  <section class="create-section">
+    <h3>Keep creating new looks!</h3>
+    <p>What's more, we do it right!</p>
+    <div class="buttons">
+      <div class="button-container">
+        <a href="{{ url_for('favorite_looks') }}">
+          <button>Favorite Looks</button>
+        </a>
+        
+        <img src="/static/images/favorite-look.jpg" alt="Favorite Looks" class="button-image">
+      </div>
+      <div class="button-container">
+        <a href="{{ url_for('wardrobe') }}">
+          <button>Wardrobe</button>
+        </a>
+        <img src="/static/images/wardrobe.jpg" alt="Wardrobe" class="button-image">
+      </div>
+      <div class="button-container">
+        <!-- Ссылка на страницу generate (с использованием <a>) -->
+        <a href="{{ url_for('generate_outfit') }}">
+            <button>Create Look</button>
+            <img src="/static/images/create-look.jpg" alt="Create Look" class="button-image">
+        </a>
+    </div>
+    
+    </div>
+  </section>
+
+  <section class="recent-favorites">
+    <h3>Your recent favorites.</h3>
+  </section>
+
+  <section class="recommendation">
+    <p>We recommend you try making up some new styles today!</p>
+  </section>
+
+  <section class="outfits">
+    <div class="outfit-preview">
+      <img src="/static/images/outfit1.jpg" alt="Outfit 1">
+      <p>Outfit 1</p>
+    </div>
+    <div class="outfit-preview">
+      <img src="/static/images/outfit2.jpg" alt="Outfit 2">
+      <p>Outfit 2</p>
+    </div>
+    <div class="outfit-preview">
+      <img src="/static/images/outfit3.jpg" alt="Outfit 3">
+      <p>Outfit 3</p>
+    </div>
+  </section>
+
+  <footer class="footer-buttons">
+    <form action="{{ url_for('logout') }}" method="POST">
+      <button type="submit">Log Out</button>  <!-- Кнопка выхода -->
+    </form>
+    <a href="{{ url_for('profile') }}">
+      <button>Details Account</button>  <!-- Кнопка для перехода в профиль -->
+    </a>
+  </footer>
+
+</body>
+</html>

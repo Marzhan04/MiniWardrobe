@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - MiniWardrobe</title>
+    <link rel="stylesheet" href="/static/css/m.css">
+</head>
+<body>
+    <section class="auth-container">
+        <h2>Create Your Account</h2>
+        <h3>Registration</h3>
+        <form action="{{ url_for('register') }}" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm password" required>
+            <button type="submit" class="btn">Sign Up / Register</button>
+        </form>
+        
+        </form>
+        
+        
+         <a href="{{ url_for('signin') }}">Sign In</a>
+
+    </section>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for category, message in messages %}
+                <li class="flash {{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+</body>
+</html>
+

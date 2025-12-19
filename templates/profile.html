@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Details</title>
+  <link rel="stylesheet" href="/static/css/pro.css">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <!-- Здесь больше не будет отображаться изображение профиля -->
+      <h2>{{ current_user.name }}</h2>
+      <p>{{ current_user.email }}</p>
+    </div>
+
+    <div class="profile-info">
+      <div class="info-item">
+        <label>Nickname:</label>
+        <p>{{ current_user.name }}</p>
+        <a href="{{ url_for('edit_profile') }}">Edit</a>
+      </div>
+
+      <div class="info-item">
+        <label>Email:</label>
+        <p>{{ current_user.email }}</p>
+        <a href="{{ url_for('edit_profile') }}">Edit</a>
+      </div>
+
+      <div class="info-item">
+        <label>Password:</label>
+        <p>*********</p>
+        <a href="{{ url_for('edit_profile') }}">Change</a>
+      </div>
+
+      <!-- Кнопка "My Favorites", которая перенаправляет на страницу с любимыми вещами -->
+      <div class="info-item">
+        <!-- Ссылка на страницу Favorite Looks, обернутая в кнопку -->
+        <a href="{{ url_for('favorite_looks') }}">
+            <button class="button" id="myFavoritesBtn">My Favorites</button>
+        </a>
+    </div>
+    
+      
+      </div>
+
+      <!-- Кнопка для удаления аккаунта -->
+      <div class="info-item">
+        <form action="{{ url_for('delete_account') }}" method="POST">
+          <button type="submit" class="button">Delete Account</button>
+        </form>
+      </div>
+
+      <!-- Кнопка для выхода из аккаунта -->
+      <div class="logout-btn">
+        <form action="{{ url_for('logout') }}" method="POST">
+          <button class="logout" type="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

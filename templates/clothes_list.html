@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniWardrobe - Clothes List</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Your Clothes Collection</h1>
+  </header>
+
+  <section class="clothes-list">
+    <h2>All Clothes</h2>
+    <div class="clothes-container">
+      {% for item in items %}
+        <div class="clothing-item">
+          <img src="{{ url_for('static', filename=item.image_url) }}" alt="{{ item.name }}">
+          <h3>{{ item.name }}</h3>
+          <p>Category: {{ item.category }}</p>
+
+          <!-- Add to Favorites Button -->
+          <form action="{{ url_for('add_to_favorites', item_id=item.id) }}" method="POST">
+            <button type="submit" class="add-to-favorites-btn">Add to Favorites</button>
+          </form>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Random Outfit Generator Button -->
+    <button onclick="window.location.href='/generate_outfit'" class="generate-outfit-btn">Generate Random Outfit</button>
+  </section>
+
+  <section class="favorites">
+    <h2>Favorites</h2>
+    <div class="favorites-container">
+      {% for item in favorites %}
+        <div class="clothing-item">
+          <img src="{{ url_for('static', filename=item.image_url) }}" alt="{{ item.name }}">
+          <h3>{{ item.name }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</body>
+</html>

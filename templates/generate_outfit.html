@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Your Look</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+   <header>
+      <h1>Generate Your Look! ✨</h1>
+      <nav>
+        <div class="search-profile">
+            <div class="profile-buttons">
+              <a href="{{ url_for('main') }}" class="main-btn">
+                <button>Home →</button>
+              </a>
+              <a href="{{ url_for('profile') }}" class="profile-btn">
+                <button>Profile →</button>
+              </a>
+            </div>
+        </div>
+      </nav>
+   </header>
+
+   <!-- Section to display categories and generate outfits -->
+   <section class="wardrobe-section">
+      <h2>Pick Your Look!</h2>
+
+      <div class="wardrobe-items">
+          <!-- Tops Category -->
+          <div class="category">
+              <h3>Tops</h3>
+              <img src="{{ url_for('static', filename='images/' + top_image) }}" alt="Tops" id="top-image">
+          </div>
+
+          <!-- Bottoms Category -->
+          <div class="category">
+              <h3>Bottoms</h3>
+              <img src="{{ url_for('static', filename='images/' + bottom_image) }}" alt="Bottoms" id="bottom-image">
+          </div>
+
+          <!-- Shoes Category -->
+          <div class="category">
+              <h3>Shoes</h3>
+              <img src="{{ url_for('static', filename='images/' + shoes_image) }}" alt="Shoes" id="shoes-image">
+          </div>
+
+          <!-- Accessories Category -->
+          <div class="category">
+              <h3>Accessories</h3>
+              <img src="{{ url_for('static', filename='images/' + accessories_image) }}" alt="Accessories" id="accessories-image">
+          </div>
+
+          <!-- Outerwear Category -->
+          <div class="category">
+              <h3>Outerwear</h3>
+              <img src="{{ url_for('static', filename='images/' + outerwear_image) }}" alt="Outerwear" id="outerwear-image">
+          </div>
+      </div>
+
+      <!-- One button to randomize all images -->
+      <div class="generate-btn">
+          <button class="randomize-btn" onclick="generateOutfit()">Generate New Outfit</button>
+      </div>
+
+      <!-- Save generated outfit to Favorite Looks -->
+      <form method="POST">
+          <input type="text" name="lookName" placeholder="Give your look a name">
+          <button type="submit">Save to Favorite Looks</button>
+      </form>
+
+      
+   </section>
+
+   <script>
+      // Function to randomize all images in one click
+      function generateOutfit() {
+          const images = {
+              'Tops': ['top1.png', 'top2.png', 'top3.png'],
+              'Bottoms': ['bottom1.png', 'bottom2.png', 'bottom3.png'],
+              'Shoes': ['shoes1.png', 'shoes2.png', 'shoes3.png'],
+              'Accessories': ['accessory1.png', 'accessory2.png', 'accessory3.png'],
+              'Outerwear': ['outerwear1.png', 'outerwear2.png', 'outerwear3.png']
+          };
+
+          // Randomly pick an image for each category
+          const topImage = images['Tops'][Math.floor(Math.random() * images['Tops'].length)];
+          const bottomImage = images['Bottoms'][Math.floor(Math.random() * images['Bottoms'].length)];
+          const shoesImage = images['Shoes'][Math.floor(Math.random() * images['Shoes'].length)];
+          const accessoriesImage = images['Accessories'][Math.floor(Math.random() * images['Accessories'].length)];
+          const outerwearImage = images['Outerwear'][Math.floor(Math.random() * images['Outerwear'].length)];
+
+          // Update the image src for each category
+          document.getElementById('top-image').src = '/static/images/' + topImage;
+          document.getElementById('bottom-image').src = '/static/images/' + bottomImage;
+          document.getElementById('shoes-image').src = '/static/images/' + shoesImage;
+          document.getElementById('accessories-image').src = '/static/images/' + accessoriesImage;
+          document.getElementById('outerwear-image').src = '/static/images/' + outerwearImage;
+      }
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniWardrobe</title>
+    <link rel="stylesheet" href="/static/css/m.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>MiniWardrobe</h1>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Create Your Perfect Look in Seconds</h2>
+            <a href="{{ url_for('signin') }}" class="btn">Start Now</a>
+            <a href="{{ url_for('signin') }}" class="btn">Explore Looks</a>
+            
+        </div>
+    </section>
+
+    <!-- How MiniWardrobe Works -->
+    <section class="how-it-works">
+        <h2>How MiniWardrobe Works?</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="/static/images/upload-item.jpg" alt="Upload your items">
+                <p>1. Upload Your Items</p>
+            </div>
+            <div class="step">
+                <img src="/static/images/generate-looks.jpg" alt="Generate Looks">
+                <p>2. Generate Looks</p>
+            </div>
+            <div class="step">
+                <img src="/static/images/save-favorite.jpg" alt="Save and Favorite">
+                <p>3. Save & Favorite</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Looks -->
+    <section class="popular-looks">
+        <h2>Popular Looks</h2>
+        <div class="looks-gallery">
+            <div class="look">
+                <img src="/static/images/look1-casual-street.jpg" alt="Look 1: Casual Street">
+                <p>Look 1: Casual Street</p>
+            </div>
+            <div class="look">
+                <img src="/static/images/look2-clean-minimal.jpg" alt="Look 2: Clean Minimal">
+                <p>Look 2: Clean Minimal</p>
+            </div>
+            <div class="look">
+                <img src="/static/images/look3-soft-aesthetic.jpg" alt="Look 3: Soft Aesthetic">
+                <p>Look 3: Soft Aesthetic</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why MiniWardrobe? -->
+    <section class="why-miniwardrobe">
+        <h2>Why MiniWardrobe?</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <h3>AI-generated outfits</h3>
+                <p>Send items to build your digital wardrobe.</p>
+            </div>
+            <div class="feature">
+                <h3>Clean modern interface</h3>
+                <p>Fast, minimal, intuitive.</p>
+            </div>
+            <div class="feature">
+                <h3>Save your favorite styles</h3>
+                <p>Store your best looks and favorites.</p>
+            </div>
+            <div class="feature">
+                <h3>Outfit Planning</h3>
+                <p>Plan your outfits easily with your wardrobe.</p>
+            </div>
+            <div class="feature">
+                <h3>Time-Saving</h3>
+                <p>Quickly find what to wear for any occasion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What People Are Saying</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>“MiniWardrobe really helps me create stylish outfits effortlessly.”</p>
+                <h4>Dean D.</h4>
+            </div>
+            <div class="testimonial">
+                <p>“I love how MiniWardrobe suggests combinations from my wardrobe.”</p>
+                <h4>Cristian L.</h4>
+            </div>
+            <div class="testimonial">
+                <p>“This app has become a real helper for my wardrobe.”</p>
+                <h4>Leenell R.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MiniWardrobe. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Общие стили для всей страницы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f0; /* Нежный светло-зеленый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Центрируем по вертикали */
+    flex-direction: column;
+    color: #333;
+}
+
+/* Стили для секции с пустым гардеробом */
+.empty-wardrobe {
+    background-color: #ffffff; /* Белый фон для контейнера */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Стили для заголовка */
+.empty-wardrobe h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стили для параграфа */
+.empty-wardrobe p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+.upload-btn {
+    background-color: #69f0ae;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;  /* Центрируем по горизонтали */
+    align-items: center;      /* Центрируем по вертикали */
+    margin: 0 auto;  
+    margin-bottom: 15px;         /* Центрируем кнопку по горизонтали */
+}
+
+
+.upload-btn:hover {
+    background-color: #4db6ac;
+}
+
+/* Стили для блока с кнопками Home и Profile */
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Стили для кнопок Home и Profile */
+.profile-buttons button {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.profile-buttons button:hover {
+    background-color: #f0f0f0;
+    border-color: #69f0ae;
+}
+
+/* Стили для эмодзи блесток */
+.sparkles {
+    font-size: 2rem;  /* Устанавливаем размер эмодзи */
+    color: #fbc02d;     /* Желтый цвет для блесток */
+    margin-left: 5px;   /* Отступ слева для красивого расположения */
+}

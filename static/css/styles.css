@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  color: #81c784;
+  font-size: 36px;
+}
+
+
+
+.create-section {
+  margin-top: 50px;
+}
+
+.create-section h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.create-section p {
+  color: #777;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #81c784;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #66bb6a;
+}
+
+.button-image {
+  margin-top: 10px;
+  width: 100px;
+  height: auto;
+}
+
+.recent-favorites h3 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.recommendation p {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #555;
+}
+
+.outfits {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 40px; /* Added gap between the outfits */
+}
+
+.outfit-preview {
+  display: inline-block;
+  margin: 20px;
+}
+
+.outfit-preview img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.outfit-preview p {
+  font-size: 18px;
+  color: #333;
+}
+
+
+
+.corner-img {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 10px;
+  z-index: 10;
+}
+
+.left {
+  left: 10px; /* Position the first image to the left */
+}
+
+.right {
+  right: 10px; /* Position the second image to the right */
+}

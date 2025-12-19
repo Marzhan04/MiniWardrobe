@@ -1,0 +1,571 @@
+/* ---------- Global Styles ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #222222;
+}
+
+/* ---------- Header Section ---------- */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background: #f1f1f1;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.hero .btn {
+    background: #34c3a0;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background: #2aa487;
+}
+
+/* ---------- How It Works Section ---------- */
+.how-it-works {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.step img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.step p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ---------- Popular Looks Section ---------- */
+.popular-looks {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.popular-looks h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.looks-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.look {
+    width: 220px;
+    text-align: center;
+}
+
+.look img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.look p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* ---------- Why MiniWardrobe Section ---------- */
+.why-miniwardrobe {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+/* ---------- Testimonials Section ---------- */
+.testimonials {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 300px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    font-weight: bold;
+    color: #34c3a0;
+}
+
+/* ---------- Footer Section ---------- */
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    background: #f7f7f7;
+    font-size: 14px;
+}
+
+/* ---------- Media Queries for Responsiveness ---------- */
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .looks-gallery {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature {
+        padding: 15px;
+    }
+
+    .testimonial {
+        width: 280px;
+    }
+}
+
+
+
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.auth-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.auth-container button {
+    background-color: #34c3a0;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+}
+
+.auth-container button:hover {
+    background-color: #2aa487;
+}
+
+.auth-container a {
+    color: #34c3a0;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.auth-container .forgot-password {
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+
+
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.auth-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.auth-container button {
+    background-color: #34c3a0;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+}
+
+.auth-container button:hover {
+    background-color: #2aa487;
+}
+
+.auth-container a {
+    color: #34c3a0;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+
+/* ---------- Global Styles ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #222222;
+}
+
+/* ---------- Header Section ---------- */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+header nav .btn {
+    background: #34c3a0;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    margin-left: 10px;
+}
+
+header nav .btn:hover {
+    background: #2aa487;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background: #f1f1f1;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .buttons .btn {
+    background: #34c3a0;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.hero .buttons .btn:hover {
+    background: #2aa487;
+}
+
+/* ---------- Recent Favorites Section ---------- */
+.recent-favorites {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.recent-favorites h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.recent-favorites p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.looks-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.look {
+    width: 220px;
+    text-align: center;
+}
+
+.look img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.look p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* ---------- Footer Section ---------- */
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    background: #f7f7f7;
+    font-size: 14px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout {
+    background-color: #e76f51;
+}
+
+.delete {
+    background-color: #e63946;
+}
+
+.btn:hover {
+    background-color: #228b83;
+    transform: scale(1.05);
+}
+
+.recent-favorites {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.recent-favorites h2 {
+    font-size: 2rem;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.recent-favorites p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.looks {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.look-item img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.look-item img:hover {
+    transform: scale(1.1);
+}
+
+.flashes {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.flash.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.flash.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f0;
+}
+
+/* Стили для header */
+/* Общий стиль для header */
+header {
+    display: flex;
+    justify-content: space-between; /* Размещение элементов по краям */
+    align-items: center;
+    padding: 20px 40px; /* Увеличиваем отступы */
+    background-color: #ffffff; /* Белый фон */
+    border-bottom: 2px solid #f0f0f0; /* Легкая тень для разделения */
+}
+
+/* Стиль для заголовка */
+header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0; /* Убираем отступы */
+    padding: 10px;
+    background-color: rgba(180, 121, 217, 0.15); /* Легкий фиолетовый фон */
+    border-radius: 20px; /* Скругленные углы для овала */
+    display: inline-block; /* Для более точного позиционирования */
+}
+
+/* Стиль для навигационных ссылок */
+header nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border: 2px solid #333; /* Черная обводка */
+    border-radius: 25px; /* Округлые углы */
+    margin-left: 15px; /* Отступ между кнопками */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Стиль при наведении на кнопки */
+header nav a:hover {
+    background-color: #f0f0f0; /* Легкая смена фона */
+}
+
+/* Добавление стрелки с помощью CSS */
+header nav a::after {
+    content: " →"; /* Стрелка после текста */
+}
+
+/* Стиль при наведении на кнопки */
+header nav a:hover {
+    background-color: #f0f0f0; /* Легкая смена фона */
+}
+
+/* Добавление стрелки с помощью CSS */
+header nav a::after {
+    content: " →"; /* Стрелка после текста */
+}
+
+
+
+/* Стили для контейнера, который содержит все категории */
+.container {
+    display: flex;
+    flex-direction: column; /* Главные пункты (категории) идут по вертикали */
+    gap: 120px; /* Увеличиваем отступ между категориями по вертикали */
+    padding: 20px;
+}
+
+/* Стили для каждой категории */
+.category {
+    display: flex;
+    flex-direction: column;  /* Заголовок категории по вертикали */
+    align-items: center; /* Центрируем заголовок и кнопки */
+    gap: 5px; /* Отступы между заголовком и кнопками */
+    text-align: center;
+}
+
+/* Стили для заголовков категорий */
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Стили для кнопок */
+.options {
+    display: flex; /* Кнопки идут по горизонтали */
+    justify-content: space-between; /* Распределяем кнопки с промежутками */
+    gap: 30px; /* Увеличиваем расстояние между кнопками по горизонтали */
+    width: 70%; /* Ограничиваем ширину контейнера, чтобы оставить пространство по краям */
+    padding: 0 15px; /* Добавляем отступы слева и справа */
+    margin: 0 auto; /* Центрируем контейнер по странице */
+}
+
+/* Стили для каждой кнопки */
+.options button {
+    padding: 10px;
+    background-color: #e0f7fa;
+    border: none; /* Убираем черную обводку */
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    flex: 1; /* Кнопки растягиваются на всю ширину */
+    max-width: 150px; /* Максимальная ширина кнопок */
+}
+
+/* Эффект при наведении на кнопки */
+.options button:hover {
+    background-color: #b2ebf2;
+}
+
+
+
+
+
+
+
+
+/* Стили для контейнера, который содержит картинку и кнопки */
+.outfit-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+    justify-content: center; /* Центрируем элементы по вертикали */
+    text-align: center; /* Текст по центру */
+    margin: 0 auto; /* Автоматические отступы по бокам */
+    width: 100%; /* Ширина на всю страницу */
+    margin-top: 100px; /* Увеличиваем отступ сверху для расположения ниже */
+    background-color: #e8f5e9; /* Легкий зеленый фон для выделения */
+    padding: 20px; /* Внутренние отступы */
+}
+
+/* Стили для изображения */
+.outfit-preview img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px; /* Отступ снизу, чтобы текст не был прижат к картинке */
+}
+
+/* Стили для текста */
+.outfit-preview p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Стили для кнопок */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+    gap: 20px; /* Отступ между кнопками */
+}
+
+/* Стили для кнопок */
+.buttons button {
+    padding: 12px 20px;
+    margin: 10px;
+    background-color: #81c784;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+/* Эффект при наведении на кнопки */
+.buttons button:hover {
+    background-color: #66bb6a;
+}
+
+/* Стили для футера с картинками */
+.footer-images {
+    display: flex;
+    justify-content: center; /* Центрируем картинки по горизонтали */
+    gap: 80px; /* Уменьшаем расстояние между картинками */
+    margin-top: 5px; /* Маленький отступ между кнопками и картинками */
+}
+
+/* Стили для картинок в футере */
+.footer-images img {
+    width: 110px; /* Уменьшаем ширину картинок */
+    height: 110px; /* Уменьшаем высоту картинок */
+    object-fit: contain; /* Сохраняем пропорции изображения */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.wardrobe-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.randomize-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.randomize-btn:hover {
+    background-color: #45a049;
+}
+
+.footer-images {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-images img {
+    width: 50px;
+    margin: 0 10px;
+}

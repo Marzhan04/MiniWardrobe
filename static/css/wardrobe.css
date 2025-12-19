@@ -1,0 +1,371 @@
+/* Общие стили для всей страницы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Учитываем border и padding в размерах элементов */
+}
+
+/* Стили для body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Убираем отступы и паддинги для всех секций */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для header */
+header {
+  background-color: #ffffff; /* Белый фон */
+  padding: 15px 40px; /* Внутренние отступы */
+  border-bottom: 2px solid #f0f0f0; /* Легкая линия внизу */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Размещение элементов с разными концами */
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Стили для списка навигации */
+nav ul {
+  display: flex;
+  gap: 20px;
+  padding-left: 0;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: #69f0ae; /* Цвет при наведении на категории */
+}
+
+/* Стили для блока поиска и кнопок профиля */
+.search-profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-profile input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.profile-buttons button {
+  background-color: #ffffff; /* Белый фон */
+  color: #333;
+  border: 2px solid #333; /* Черная обводка */
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.profile-buttons button:hover {
+  background-color: #f0f0f0;
+  border-color: #69f0ae;
+}
+
+/* Стили для секции "My Wardrobe" */
+.wardrobe-section {
+  background-color: #e8f5e9;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем все элементы по горизонтали */
+}
+
+/* Стили для заголовка */
+.wardrobe-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.wardrobe-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Стили для информации о количестве элементов и кнопки */
+.wardrobe-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Стили для изображений с одеждой */
+.wardrobe-images {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  margin-top: 0px;
+  width: 90%;
+  max-width: 900px;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.wardrobe-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.item-count {
+  font-weight: bold;
+}
+
+.upload-btn {
+  background-color: #69f0ae;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #4db6ac;
+}
+
+/* Стили для секции "All your items in one place" */
+.item-list {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Стили для заголовка "All Your Items in One Place" */
+.items-title {
+  font-size: 3rem;
+  color: #69f0ae;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(45deg, #69f0ae, #b3b3f2);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Стили для контейнера элементов */
+.item-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+/* Стили для каждого элемента (картинка + кнопка) */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  flex: 1 1 30%;
+  max-width: 300px;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-icon {
+  font-size: 30px;
+}
+
+.wardrobe-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+
+
+/* Центрирование формы */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.upload-btn {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #45a049;
+}
+.wardrobe-images-container {
+  max-height: 500px; /* Ограничиваем высоту */
+  overflow-y: scroll; /* Включаем вертикальную прокрутку */
+  padding: 20px;
+}
+
+.wardrobe-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Расстояние между изображениями */
+}
+
+.image-container {
+  flex: 1 1 200px; /* Автоматически регулирует размер изображений */
+  text-align: center;
+}
+
+.wardrobe-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Ограничиваем максимальную высоту изображения */
+}
+.back-btn {
+  background-color: #4CAF50; /* Зеленый цвет, как у Upload Items */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Отступ сверху */
+}
+
+.back-btn:hover {
+  background-color: #45a049; /* Немного темнее при наведении */
+}
+
+.delete-btn {
+  background-color: #45a049; /* Серый цвет, как у кнопки "Back to Wardrobe" */
+  border: 2px solid #ccc; /* Обводка */
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #45a049; /* Немного темнее при наведении */
+}
+/* Стили для генерируемого аутфита */
+.generated-outfit {
+  margin-top: 30px;
+}
+
+.generated-outfit h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.outfit-item {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.outfit-item img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.generate-outfit-btn {
+  padding: 10px 20px;
+  background-color: #8a4f95;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.generate-outfit-btn:hover {
+  background-color: #7a3e84;
+}

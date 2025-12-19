@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Looks</title>
+    <link rel="stylesheet" href="/static/css/fav.empty.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <div class="search-profile">
+                    <div class="profile-buttons">
+                        <a href="{{ url_for('main') }}" class="main-btn">
+                            <button>Home →</button>
+                        </a>
+                        <a href="{{ url_for('profile') }}" class="profile-btn">
+                            <button>Profile →</button>
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="text">
+                    <h1>Favourite Looks</h1>
+                    <p class="subtitle">Saved inspirations & styles <span>✨</span></p>
+                    <p class="item-count">Favourite Items 3</p>
+                </div>
+                
+                <div class="icons">
+                    <div class="icon">
+                        <img src="/static/images/f_1.png" alt="Shopping Bag">
+                    </div>
+                    <div class="icon">
+                        <img src="/static/images/f_2.png" alt="Heart">
+                    </div>
+                    <div class="icon">
+                        <img src="/static/images/f_3.png" alt="Hanger">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Section with no looks message -->
+    <section class="no-looks">
+        <p class="message">No favourite looks yet.<br>Save looks you love to keep them here..</p>
+        <a href="{{ url_for('generate_outfit') }}" class="generate_look">
+            <button>Generate Look</button>
+        </a>
+        
+        <span class="star">✨</span>
+    </section>
+
+</body>
+</html>

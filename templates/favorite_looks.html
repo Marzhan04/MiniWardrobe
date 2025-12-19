@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Looks</title>
+    <link rel="stylesheet" href="/static/css/fav.looks.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="search-profile">
+                <div class="profile-buttons">
+                    <a href="{{ url_for('main') }}" class="main-btn">
+                        <button>Home →</button>
+                    </a>
+                    <a href="{{ url_for('profile') }}" class="profile-btn">
+                        <button>Profile →</button>
+                    </a>
+                </div>                
+            </div>
+            <div class="header-content">
+                <div class="text">
+                    <h1>Favourite Looks</h1>
+                    <p class="subtitle">Saved inspirations & styles <span>✨</span></p>
+                    <p class="item-count">Favourite Items {{ favorite_looks|length }}</p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <section class="looks-section">
+        {% if favorite_looks %}
+            {% for look in favorite_looks %}
+                <div class="look">
+                    <div class="look-image">
+                        <img src="{{ url_for('static', filename='images/' + look['top_image']) }}" alt="Outfit">
+                    </div>
+                    <div class="look-info">
+                        <h3>{{ look['name'] }}</h3>
+                        <button class="view-btn">
+                            <a href="{{ url_for('view_outfit', outfit_id=loop.index0) }}">View</a>
+                        </button>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No favorite looks saved yet.</p>
+        {% endif %}
+    </section>
+
+</body>
+</html>

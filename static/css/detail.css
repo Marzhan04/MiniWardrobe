@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e1d6f0, #f1e1f7, #f7e4e8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    background: linear-gradient(135deg, #e1d6f0, #f1e1f7, #f7e4e8); 
+    padding: 40px;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Элементы выстраиваются по вертикали */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Центрируем заголовок и звездочку по горизонтали */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* Небольшой отступ между заголовком и звездочкой */
+}
+
+.star {
+    font-size: 40px;
+    color: #f9d342;
+}
+
+.details-section {
+    display: flex;
+    justify-content: center; /* Центрируем содержимое */
+    margin-bottom: 40px;
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.item-image img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-right: 20px; /* Отступ между изображением и текстом */
+}
+
+.item-details ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.checkmark {
+    color: #28a745;
+    margin-right: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.action-btn:hover {
+    background-color: #218838;
+}

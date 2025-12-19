@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wardrobe</title>
+    <link rel="stylesheet" href="/static/css/wardrobe.css">
+</head>
+<body>
+   <header>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('wardrobe', category='all') }}">ALL</a></li>
+          <li><a href="{{ url_for('wardrobe', category='Tops') }}">TOPS</a></li>
+          <li><a href="{{ url_for('wardrobe', category='Bottoms') }}">BOTTOMS</a></li>
+          <li><a href="{{ url_for('wardrobe', category='Shoes') }}">SHOES</a></li>
+          <li><a href="{{ url_for('wardrobe', category='Accessories') }}">ACCESSORIES</a></li>
+          <li><a href="{{ url_for('wardrobe', category='Outerwear') }}">OUTERWEAR</a></li>
+        </ul>
+      </nav>
+      <div class="search-profile">
+        <div class="profile-buttons">
+          <a href="{{ url_for('main') }}" class="main-btn">
+            <button>Home →</button>
+          </a>
+          <a href="{{ url_for('profile') }}" class="profile-btn">
+            <button>Profile →</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Секция "My Wardrobe" -->
+  <section class="wardrobe-section">
+    <div class="wardrobe-header">
+        <h1>My Wardrobe</h1>
+        <div class="wardrobe-info">
+            <p>Wardrobe Items: <span class="item-count">{{ items|length }}</span></p>
+            <a href="/upload">
+                <button class="upload-btn">Upload Items</button>
+            </a>
+            <!-- Генерация аутфита -->
+           
+            <a href="{{ url_for('generate_outfit') }}">
+              <button>Generate Look</button>
+          </a>
+          
+          </div>
+        </div>
+    </div>
+
+    <!-- Прокручиваемая секция с одеждой -->
+    <div class="wardrobe-images-container">
+        <div class="wardrobe-images">
+            {% for item in items %}
+              <div class="image-container">
+                  <img src="{{ url_for('uploaded_file', filename=item.image_url.split('/')[-1]) }}" alt="{{ item.name }}" class="wardrobe-image">
+                  <p>{{ item.name }}</p>
+                  <!-- Кнопка Delete -->
+                  <form action="{{ url_for('delete_item', item_id=item.id) }}" method="POST">
+                      <button type="submit" class="delete-btn">Delete</button>
+                  </form>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+  </section>
+</body>
+</html>

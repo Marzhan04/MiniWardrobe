@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Item - My Wardrobe</title>
+    <link rel="stylesheet" href="/static/css/wardrobe.css">
+</head>
+<body>
+   <header>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="#">ALL</a></li>
+          <li><a href="#">TOPS</a></li>
+          <li><a href="#">BOTTOMS</a></li>
+          <li><a href="#">SHOES</a></li>
+          <li><a href="#">ACCESSORIES</a></li>
+          <li><a href="#">OUTERWEAR</a></li>
+        </ul>
+      </nav>
+      <div class="search-profile">
+        <input type="text" placeholder="Search...">
+        <div class="profile-buttons">
+          <a href="{{ url_for('main') }}" class="main-btn">
+            <button>Home →</button>
+          </a>
+          <a href="{{ url_for('profile') }}" class="profile-btn">
+            <button>Profile →</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Секция "Upload Item" -->
+  <section class="upload-section">
+    <div class="upload-header">
+      <h1>Upload a New Item</h1>
+    </div>
+
+    <form action="{{ url_for('upload_item') }}" method="post" enctype="multipart/form-data" class="upload-form">
+      <div class="form-group">
+        <label for="name">Item Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter item name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select a category</option>
+          <option value="Tops">Tops</option>
+          <option value="Bottoms">Bottoms</option>
+          <option value="Shoes">Shoes</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Outerwear">Outerwear</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="file">Upload Image</label>
+        <input type="file" id="file" name="file" accept="image/*" required>
+      </div>
+
+      <button type="submit" class="upload-btn">Upload Item</button>
+    </form>
+    <a href="{{ url_for('wardrobe') }}">
+      <button class="back-btn">Back to Wardrobe</button>
+  </a>
+
+  </section>
+</body>
+</html>

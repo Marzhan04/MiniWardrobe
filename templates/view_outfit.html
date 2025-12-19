@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Outfit</title>
+    <link rel="stylesheet" href="/static/css/view_outfit.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="{{ url_for('favorite_looks') }}">Back to Favourite Looks</a>
+            <h1>{{ outfit['name'] }}</h1>
+        </header>
+
+        <section class="full-outfit">
+            <div class="outfit-image">
+                <img src="{{ url_for('static', filename='images/' + outfit['top_image']) }}" alt="Top">
+                <img src="{{ url_for('static', filename='images/' + outfit['bottom_image']) }}" alt="Bottom">
+                <img src="{{ url_for('static', filename='images/' + outfit['shoes_image']) }}" alt="Shoes">
+                <img src="{{ url_for('static', filename='images/' + outfit['accessories_image']) }}" alt="Accessories">
+                <img src="{{ url_for('static', filename='images/' + outfit['outerwear_image']) }}" alt="Outerwear">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

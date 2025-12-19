@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e1d6f0, #f1e1f7, #f7e4e8); /* Мягкий градиент */
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #6c757d;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.subtitle span {
+    font-size: 50px;
+    margin-left: 5px;
+}
+
+.text {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.item-count {
+    font-size: 18px;
+    color: #28a745;
+    margin-top: 10px;
+}
+
+.nav {
+    position: absolute;
+    top: 40px;
+    right: 25%;
+    transform: translateX(50%);
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #e1d6f0;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-left: 20px;
+    transition: background-color 0.3s, transform 0.2s; /* Плавный переход */
+}
+
+.nav a:hover {
+    background-color: #d6b4e7;
+    transform: scale(1.05); /* Увеличиваем при наведении */
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+    margin-top: 50px;
+}
+
+.icon {
+    margin: 0 20px;
+    width: 150px;
+    height: 80px;
+}
+
+.icon img {
+    width: 100%;
+    height: auto;
+}
+
+.no-looks {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #e1d6f0, #f1e1f7, #f7e4e8);
+    margin-top: 60px;
+}
+
+.message {
+    font-size: 20px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.create-look-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Плавный переход */
+    margin-bottom: 20px;
+}
+
+.create-look-btn:hover {
+    background-color: #218838;
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+}
+
+.star {
+    font-size: 40px;
+    color: #f9d342;
+}
+/* Кнопки "Home" и "Profile" */
+.profile-buttons a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #9c27b0, #7e57c2); /* Лаванда с градиентом */
+    color: white;
+    border-radius: 50px;  /* Скругленные углы */
+    font-weight: bold;
+    border: 1px solid #7e57c2; /* Добавляем фиолетовую рамку */
+    transition: background 0.3s ease, transform 0.2s ease; /* Плавные переходы */
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.profile-buttons a:hover {
+    background: linear-gradient(135deg, #7e35b1, #5e35b1); /* Тёмный градиент при наведении */
+    transform: scale(1.1); /* Увеличиваем размер при наведении */
+}
+
+.profile-buttons a:active {
+    background: linear-gradient(135deg, #4527a0, #311b92); /* Ещё темнее при клике */
+    transform: scale(0.95); /* Уменьшаем размер при клике */
+}
