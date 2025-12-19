@@ -40,6 +40,8 @@ Installation steps:
 
 Start command:
 flask run
+python app.py
+
 
 How to Run Tests
 
