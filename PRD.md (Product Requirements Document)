@@ -1,0 +1,44 @@
+PRD.md (Product Requirements Document)
+
+Product Requirements Document (PRD)
+
+1. Product Goal
+The goal of MiniWardrobe is to help users select their daily outfits effortlessly by generating random combinations from their wardrobe based on selected filters.
+
+2. Problem Statement
+Users often experience decision fatigue when choosing daily outfits. MiniWardrobe aims to solve this by automating the selection process, saving users time and reducing stress.
+
+3. Target Audience
+- Students
+- Young professionals
+- Fashion-conscious individuals
+
+4. User Roles
+- User: Can add, edit, and view their wardrobe items and generated outfits.
+
+
+5. User Scenarios
+1. User adds a new clothing item: As a user, I want to upload a new clothing item to my wardrobe, so I can use it in outfit generation.
+2. User generates an outfit: As a user, I want to generate an outfit based on my wardrobe, so I can quickly decide what to wear.
+
+6. Functional Requirements
+- The system must allow users to add items to their wardrobe.
+- The system must generate random outfits from the wardrobe.
+- Users must have their own profile, or they won't be able to interact with the website.
+
+
+7. Non-Functional Requirements
+- Performance: The app should generate outfits within 3 seconds.
+- Reliability: The app should not crash during use.
+- Security: User data must be encrypted and secure.
+- Usability: The UI should be intuitive and simple to use.
+- Scalability: Currently, the MiniWardrobe website is being developed locally, has not been deployed on a cloud platform, is not set up for scalability, and is designed to handle a limited number of users without load testing.
+
+8. MVP Scope
+- MVP Features: User login, wardrobe item management, outfit generation.
+- Out-of-Scope: Social sharing, advanced outfit customization.
+
+9. Acceptance Criteria
+- Feature 1: Outfit generation works within 3 seconds.
+- Feature 2: Users can add and edit wardrobe items.
+
