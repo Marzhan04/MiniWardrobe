@@ -46,9 +46,4 @@ How to Run Tests
 Test command:
 pytest
 
-Additional Documents
-- [PRD](./PRD.md)
-- [User Stories](./User_Stories.md)
-- [Architecture](./Architecture.md)
-- [API description](./API.md)
 
